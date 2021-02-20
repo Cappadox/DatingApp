@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -25,7 +26,8 @@ namespace API.Middleware
       {
         await _next(context);
       }
-      catch (System.Exception ex)
+
+      catch (Exception ex)
       {
         _logger.LogError(ex, ex.Message);
         context.Response.ContentType = "application/json";

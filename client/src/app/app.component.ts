@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   users: any;
   constructor(private accountService: AccountService) {}
 
+
   ngOnInit(): void {
     this.setCurrentUser();
   }
